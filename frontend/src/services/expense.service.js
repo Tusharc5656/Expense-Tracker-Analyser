@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = '/api/expenses';
-const API_URL_ANALYTICS = '/api/analytics';
+const API_URL = `${import.meta.env.VITE_API_URL || ''}/api/expenses`;
+const API_URL_ANALYTICS = `${import.meta.env.VITE_API_URL || ''}/api/analytics`;
 
 const getHeader = () => {
   const user = JSON.parse(localStorage.getItem('user'));
